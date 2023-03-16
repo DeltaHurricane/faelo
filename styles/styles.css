@@ -1,0 +1,49 @@
+.wrapper > * {
+  grid-column: 2;
+}
+
+.wrapper {
+  display: grid;
+
+  grid-template-columns: 1fr min(80ch, calc(100% - 64px)) 1fr;
+}
+
+.full-bleed {
+  grid-column: 1 / -1;
+}
+
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0px;
+  background-color: rgba(0, 174, 255);
+  height: 6rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.header.hidebg {
+  /* top: -6rem; */
+  background-color: rgba(0, 174, 255, 0);
+  border: 1px solid black;
+}
+/* @keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.thirteen::before {
+  animation: 6s rotate linear infinite;
+  width: 200%;
+  height: 200%;
+  background: var(--tile-border);
+} */
+
+/* mobile */
+@media (max-width: 75ch) {
+}
