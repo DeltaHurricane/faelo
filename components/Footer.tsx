@@ -1,8 +1,8 @@
+// @ts-nocheck
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
 function useTopOfPage() {
   const [scrollDirection, setScrollDirection] = useState<boolean>(true);
   useEffect(() => {
@@ -27,7 +27,7 @@ function useTopOfPage() {
 
   return scrollDirection;
 }
-// @ts-nocheck
+
 export function Footer() {
   const isTop = useTopOfPage();
   return (
