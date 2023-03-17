@@ -1,12 +1,24 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import { Box } from "@chakra-ui/react";
-import { Header } from "@/components/Header";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Image
+        alt="bgInicial"
+        src="/bg.png"
+        width={0}
+        height={0}
+        sizes="cover"
+        style={{
+          objectFit: "cover",
+          zIndex: -1,
+          width: "100vw",
+          height: "100vh",
+          position: "absolute",
+          top: 0,
+        }}
+      />
       <main className="wrapper">
         <Box
           position={"relative"}
@@ -14,13 +26,6 @@ export default function Home() {
           className="full-bleed"
           width={"calc(100% + 1px)"}
         >
-          <Image
-            alt="bgInicial"
-            src="/bg.png"
-            fill
-            sizes="cover"
-            style={{ objectFit: "cover", zIndex: -1 }}
-          />
           <Box
             position={"relative"}
             justifyContent={"center"}
@@ -60,12 +65,6 @@ export default function Home() {
             </Box>
           </Box>
         </Box>
-        <div> blasdfasd</div>
-        <div> blasdfasd</div>
-        <div> blasdfasd</div>
-        <div> blasdfasd</div>
-        <div> blasdfasd</div>
-        <div> blasdfasd</div>
       </main>
     </>
   );

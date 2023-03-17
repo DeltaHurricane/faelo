@@ -4,6 +4,8 @@ import type { AppProps } from "next/app";
 import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 import chakraTheme from "@chakra-ui/theme";
 import Head from "next/head";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const { Button } = chakraTheme.components;
 
@@ -22,7 +24,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
+      <Header />
       <Component {...pageProps} />
+      <Footer />
     </ChakraBaseProvider>
   );
 }
