@@ -4,6 +4,7 @@
 
 body {
   overflow-x: hidden;
+  height: fit-content;
 }
 
 .wrapper > * {
@@ -24,7 +25,6 @@ body {
   position: sticky;
   top: 0px;
   background-color: rgba(238, 238, 230, 0);
-
   height: 6rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -32,30 +32,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(238, 238, 230, 0);
 }
 
 .header.hidebg {
-  /* top: -6rem; */
+  border-bottom: 1px solid black;
   background-color: #f4f4f0;
 }
-/* @keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
 
-.thirteen::before {
-  animation: 6s rotate linear infinite;
-  width: 200%;
-  height: 200%;
-  background: var(--tile-border);
-} */
-
-/* mobile */
 @media (max-width: 75ch) {
 }
 
@@ -76,13 +60,23 @@ body {
   background: var(--footer-background);
   filter: url("#blob");
 }
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
 .footer .bubbles .bubble {
   position: absolute;
   left: var(--position, 50%);
   background: var(--footer-background);
   border-radius: 100%;
   animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s), slide 4s;
   transform: translate(-50%, 100%);
 }
 .footer .content {
@@ -111,5 +105,82 @@ body {
   }
   100% {
     bottom: var(--distance, 10rem);
+  }
+}
+
+.artist-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0 5%;
+}
+
+.artist-card {
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 300px;
+  max-height: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  border-radius: 10%;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+}
+
+.artist-image {
+  border-radius: 10%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.artist-name {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artist-bio {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .artist-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .artist-card {
+    padding: 10px;
+  }
+
+  .artist-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .artist-name {
+    font-size: 18px;
+  }
+
+  .artist-bio {
+    font-size: 14px;
   }
 }

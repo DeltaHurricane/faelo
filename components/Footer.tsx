@@ -3,19 +3,18 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
 function useTopOfPage() {
-  const [scrollDirection, setScrollDirection] = useState<boolean>(true);
+  const [scrollDirection, setScrollDirection] = useState<boolean>(false);
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-    console.log(lastScrollY);
-
     const topOfThePage = () => {
-      const scrollY = window.pageYOffset;
-
-      if (scrollY === 0) {
-        setScrollDirection(true);
-      } else {
+      if (
+        window.innerHeight + Math.ceil(window.pageYOffset + 1) >=
+        document.body.offsetHeight
+      ) {
         setScrollDirection(false);
+      } else {
+        setScrollDirection(true);
       }
     };
 

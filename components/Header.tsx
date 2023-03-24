@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState<null | "down" | "up">(
-    "down"
+    "up"
   );
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
@@ -59,7 +59,7 @@ export function Header() {
           position: "absolute",
           left: 0,
         }}
-        onClick={() => router.push("")}
+        onClick={() => router.push("/")}
       />
       <Box display={"flex"} gap={"20px"}>
         {/*@ts-ignore */}
@@ -74,7 +74,7 @@ export function Header() {
         {/*@ts-ignore */}
         <Button
           borderRadius={20}
-          onClick={() => router.push("")}
+          onClick={() => router.push("/artistas/")}
           colorScheme="yellow"
           background={"#FDC400"}
         >
