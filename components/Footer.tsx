@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function useTopOfPage() {
-  const [scrollDirection, setScrollDirection] = useState<boolean>(false);
+  const [scrollDirection, setScrollDirection] = useState<boolean>(true);
   useEffect(() => {
     const topOfThePage = () => {
       if (

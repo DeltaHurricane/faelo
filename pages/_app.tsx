@@ -7,11 +7,12 @@ import Head from "next/head";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const { Button } = chakraTheme.components;
+const { Button, Menu } = chakraTheme.components;
 
 const theme = extendBaseTheme({
   components: {
     Button,
+    Menu,
   },
 });
 

@@ -1,7 +1,10 @@
 import Image from "next/image";
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <Image
@@ -30,7 +33,7 @@ export default function Home() {
             position={"relative"}
             justifyContent={"center"}
             alignItems={"center"}
-            height={["400px", "500px"]}
+            height={["300px", "400px", "500px"]}
             mt={[0, "50px"]}
             width={"100%"}
             minHeight={"250px"}
@@ -45,12 +48,15 @@ export default function Home() {
           </Box>
           <Box
             className="wrapper"
+            flexDir={"column"}
             position={"relative"}
             justifyContent={"center"}
             alignItems={"center"}
             height={"auto"}
             textAlign={"center"}
             width={"100%"}
+            gap="1rem"
+            justifyItems="center"
           >
             <Box
               fontFamily={"sans-serif"}
@@ -63,6 +69,15 @@ export default function Home() {
               superiority chaos burying christian. Justice snare horror pious
               joy hope free transvaluation.
             </Box>
+
+            <Button
+              width={["100%", "100%", "300px"]}
+              height={["50px", "50px", "70px"]}
+              onClick={() => router.push("/artistas/")}
+              colorScheme={"yellow"}
+            >
+              Conheça nossos artistas
+            </Button>
           </Box>
         </Box>
       </main>
