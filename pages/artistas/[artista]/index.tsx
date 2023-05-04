@@ -5,7 +5,6 @@ function ArtistProfile() {
   const router = useRouter();
   const artista = router.query.artista as unknown as string;
   const artist = artists.find((artist) => artist.id === parseInt(artista, 10));
-  console.log(artista);
 
   if (!artist) {
     return <h1>Artist not found</h1>;

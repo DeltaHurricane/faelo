@@ -7,15 +7,13 @@ function ArtistList() {
   return (
     <>
       <div
+        className="bg"
         style={{
           zIndex: -1,
-          width: "100%",
-          height: "100%",
-          position: "absolute",
           background: "aliceblue",
-          top: 0,
         }}
-      />
+      ></div>
+
       <Box
         min-height={"calc(100vh - 6rem)"}
         display={"flex"}

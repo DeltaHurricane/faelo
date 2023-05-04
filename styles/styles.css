@@ -7,6 +7,11 @@ body {
   height: fit-content;
 }
 
+html {
+  background-size: cover;
+  height: 100%;
+}
+
 .bg {
   position: fixed;
   top: -50%;
