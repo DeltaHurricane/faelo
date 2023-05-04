@@ -7,9 +7,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg">
-        <img src="/bg.png" alt="" />
-      </div>
+      <img className="bg" src="/bg.png" alt="" />
 
       <main className="wrapper">
         <Box

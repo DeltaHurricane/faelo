@@ -7,7 +7,7 @@ function ArtistList() {
   return (
     <>
       <div
-        className="bg"
+        className="background"
         style={{
           zIndex: -1,
           background: "aliceblue",
