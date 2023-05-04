@@ -7,34 +7,23 @@ export default function Home() {
 
   return (
     <>
-      <Image
-        alt="bgInicial"
-        src="/bg.png"
-        width={0}
-        height={0}
-        sizes="cover"
-        style={{
-          objectFit: "cover",
-          zIndex: -1,
-          width: "100vw",
-          height: "100vh",
-          position: "absolute",
-          top: 0,
-        }}
-      />
+      <div className="bg">
+        <img src="/bg.png" alt="" />
+      </div>
+
       <main className="wrapper">
         <Box
           position={"relative"}
-          height={"calc(100vh - 6rem)"}
+          minHeight={"calc(100vh - 6rem)"}
           className="full-bleed"
           width={"calc(100% + 1px)"}
+          pb={"1rem"}
         >
           <Box
             position={"relative"}
             justifyContent={"center"}
             alignItems={"center"}
             height={["200px", "300px", "500px"]}
-            mt={[0, "50px"]}
             width={"100%"}
             minHeight={"250px"}
             minWidth={"250px"}
