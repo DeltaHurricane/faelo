@@ -64,7 +64,7 @@ body {
 
 .footer {
   z-index: 1;
-  --footer-background: #dbdbd7;
+  --footer-background: #ef7014;
   display: grid;
   position: relative;
   grid-area: footer;
@@ -113,6 +113,7 @@ body {
     width: var(--size, 4rem);
     height: var(--size, 4rem);
   }
+
   100% {
     width: 0rem;
     height: 0rem;
@@ -121,8 +122,13 @@ body {
 @keyframes bubble-move {
   0% {
     bottom: -4rem;
+    background-color: var(--footer-background);
+  }
+  80% {
+    background-color: var(--footer-background);
   }
   100% {
+    background-color: red;
     bottom: var(--distance, 10rem);
   }
 }

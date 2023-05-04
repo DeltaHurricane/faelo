@@ -33,7 +33,7 @@ export default function Home() {
             position={"relative"}
             justifyContent={"center"}
             alignItems={"center"}
-            height={["300px", "400px", "500px"]}
+            height={["200px", "300px", "500px"]}
             mt={[0, "50px"]}
             width={"100%"}
             minHeight={"250px"}
