@@ -7,7 +7,7 @@ function ArtistList() {
   return (
     <>
       <div
-        className="background"
+        className="backgroundColor"
         style={{
           zIndex: -1,
           background: "aliceblue",
@@ -23,6 +23,7 @@ function ArtistList() {
         gap={"30px"}
         pt={"30px"}
         pb={"50px"}
+        width={'100vw'}
       >
         <Text
           fontFamily={"sans-serif"}
@@ -32,17 +33,17 @@ function ArtistList() {
         >
           Escolha um Artista:
         </Text>
-        <ul className="artist-list">
+        <ul className="artists-list">
           {artists.map((artist) => (
             <li key={artist.id}>
-              <Link className="artist-card" href={`/artistas/${artist.id}`}>
+              <Link className="artists-card" href={`/artistas/${artist.id}`}>
                 <img
-                  className="artist-image"
+                  className="artists-image"
                   src={artist.imageUrl}
                   alt={artist.name}
                 />
               </Link>
-              <h2 className="artist-name">{artist.name}</h2>
+              <h2 className="artists-name">{artist.name}</h2>
             </li>
           ))}
         </ul>

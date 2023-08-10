@@ -1,0 +1,68 @@
+.artists-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0 5%;
+}
+
+.artists-card {
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 300px;
+  max-height: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  border-radius: 10%;
+}
+
+.artists-card:hover {
+  transform: translateY(-5px);
+}
+
+.artists-image {
+  top: 0;
+  border-radius: 10%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.artists-name {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .artists-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .artists-card {
+    padding: 10px;
+  }
+
+  .artists-name {
+    font-size: 18px;
+  }
+
+
+
+}
