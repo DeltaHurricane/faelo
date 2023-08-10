@@ -4,8 +4,7 @@ import type { AppProps } from "next/app";
 import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 import chakraTheme from "@chakra-ui/theme";
 import Head from "next/head";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Header, Footer } from "@/components";
 
 const { Button, Menu } = chakraTheme.components;
 
@@ -20,9 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraBaseProvider theme={theme}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="Faelo" content="Site da Enactus Ufes Vitoria" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Faelo</title>
+        <meta name="Faelo" content="Site da Enactus Ufes Vitoria"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Header />

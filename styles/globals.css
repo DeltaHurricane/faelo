@@ -84,3 +84,17 @@ body {
   max-width: 100vw;
   height: 100vh;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  height: fit-content;
+}
+
+html {
+  background-size: cover;
+  height: 100vh;
+}
