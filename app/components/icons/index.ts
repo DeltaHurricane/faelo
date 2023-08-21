@@ -5,7 +5,7 @@ export {ShareIcon} from './Share'
 export {ShoppingIcon} from './Shopping'
 export {ArrowBackIcon} from './ArrowBack'
 export {CloseIcon} from './Close'
-
+export {InstagramIcon} from './Instagram'
 
 
 

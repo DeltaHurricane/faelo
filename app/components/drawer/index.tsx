@@ -23,9 +23,9 @@ export  function Drawer({
       <Dialog
         unmount={false}
         onClose={() => setIsOpen(false)}
-        className="fixed z-30 inset-0 overflow-y-auto"
+        className="fixed z-40 inset-0 overflow-y-auto"
       >
-        <div className="flex w-3/4 h-screen">
+        <div className="flex w-3/4 h-screen min-h-full">
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-in duration-300"

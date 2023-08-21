@@ -6,7 +6,7 @@ export function Header() {
   return (
     <>
       <div
-        className="md:hidden z-20 sticky top-2 left-2 w-fit m-0 pointer-events-none h-8 mt-[-2.5rem]"
+        className="md:hidden z-30 sticky top-2 left-2 w-fit m-0 pointer-events-none h-8 mt-[-2.5rem]"
       > 
         <NavMobile />
       </div>
