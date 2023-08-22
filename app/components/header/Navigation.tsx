@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { NAVLINKS } from '@/utils/navLinks';
-import { RoundedButton } from '../buttons';
 
 
 
@@ -23,6 +22,7 @@ export function Navigation() {
         style={{
           cursor: "pointer",
           objectFit: "contain",
+          position: "absolute"
         }}
         onClick={() => router.push("/")}
       />

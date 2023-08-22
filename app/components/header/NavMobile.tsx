@@ -11,6 +11,12 @@ export function NavMobile() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname()
   const router = useRouter();
+
+  function navigate(url:string){
+    router.push(url)
+    setIsOpen(!isOpen)
+  }
+
   return (
     <>
       <Drawer
@@ -36,7 +42,7 @@ export function NavMobile() {
               return (
                 <button
                   className="font-serif disabled:bg-Eyellow-300 disabled:text-Eyellow-800 shadow-inner bg-white border p-2 text-lg w-full text-center rounded-md flex gap-3 items-center"
-                  onClick={() => router.push(link.url)}
+                  onClick={() => navigate(link.url)}
                   disabled={isActive}
                   key={link.name}
                 >
@@ -48,7 +54,7 @@ export function NavMobile() {
           </div>
         </div>
       </Drawer>
-      <RoundedButton onClick={() => setIsOpen(!isOpen)}>
+      <RoundedButton className='px-0 py-0'  onClick={() => setIsOpen(!isOpen)}>
         {<BarsIcon className='w-8 h-8' />}
       </RoundedButton>
     </>

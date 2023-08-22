@@ -6,6 +6,6 @@ export {ShoppingIcon} from './Shopping'
 export {ArrowBackIcon} from './ArrowBack'
 export {CloseIcon} from './Close'
 export {InstagramIcon} from './Instagram'
-
+export {ChevonNextIcon} from './ChevonNext'
 
 

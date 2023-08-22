@@ -26,9 +26,9 @@ export function Footer() {
               <InstagramIcon className="text-black h-8 w-8" />
               <p className="text-2xl underline">Instagram</p>
             </Link>
-            <p className="text-2xl">Contato:</p>
-            <p className="text-md">+55 27 99958-1478</p>
-            <p className="text-md">emaioAleatorio@gmail.com</p>
+            <p className="text-2xl max-lg:hidden">Contato:</p>
+            <p className="text-md">+55 (27) 99958-1478</p>
+            <p className="text-md">emeioAleatorio@gmail.com</p>
             
           </div>
           <Link
